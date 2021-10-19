@@ -34,7 +34,11 @@
     </div>
      <div class="form-group">
         <label asp-for="Categoria"></label>
-        <select asp-for="CategoriaId" asp-items="ViewBag.Categoria" type="text" class="form-control"></select>
+        <select asp-for="CategoriaId" asp-items="ViewBag.Categoria" type="text" class="form-control">
+                     <option value ="Vestimenta">Vestimenta</option>
+                    <option value ="Deporte">Deporte</option>
+                    <option value ="Utencilios">Utencilios</option>
+                    <option value ="Instrumentos musicales">Instrumentos musicales</option></select>
     </div>
     <br>
     <br>
