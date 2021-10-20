@@ -9,10 +9,11 @@
         <th>NomProducto</th>
         <th>Foto</th>
         <th>Descripcion</th>
-         <th>Categoria</th>
         <th>Precio</th>
+         <th>Celular</th>
+          <th>Lugar</th>
          <th>Nombre</th>
-        <th>Celular</th>
+        <th>Categoria</th>
        
     </tr>
     @foreach (var item in Model)
@@ -26,22 +27,25 @@
              <td>
                 @item.Descripcion
             </td>
-             <td>
-                @item.Categoria.Nombre
-            </td>
+            
             <td>
                 @item.Precio
+            </td>
+            
+            <td>
+                @item.Celular
+            </td>
+            <td>
+                @item.Lugar
             </td>
             <td>
                 @item.Nombre
             </td>
-            <td>
-                @item.Celular
-            </td>
-            
 
             <td>
-               
+                <td>
+                @item.Categoria.Nombre
+            </td>
 
                 <form action="/busco/borrarproducto" method="post" class="d-inline-block">
                     <input type="hidden" name="id" value="@item.Id" />
