@@ -17,7 +17,9 @@ namespace PC3.Controllers
         }
 
         public IActionResult Productos() {
+            
             var productos = _context.Productos.Include(x => x.Categoria).OrderBy(r => r.Nombre).ToList();
+            
             return View(productos);
         }
 
@@ -28,6 +30,9 @@ namespace PC3.Controllers
         }
          [HttpPost]
         public IActionResult NuevoProducto(Producto r) {
+                
+            
+
             if (ModelState.IsValid) {
                 _context.Add(r);
                 _context.SaveChanges();
@@ -51,3 +56,4 @@ namespace PC3.Controllers
 
     
 }
+
